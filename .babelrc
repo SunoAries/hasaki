@@ -1,0 +1,31 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    ["@babel/preset-stage-0", { "decoratorsLegacy": true }],
+    "@babel/preset-react"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "styled-components"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "lodash",
+        ["import", {
+          "libraryName": "antd",
+          "libraryDirectory": "es"
+        }]
+      ]
+    },
+    "test": {
+      "plugins": [
+        "dynamic-import-node",
+        ["import", {
+          "libraryName": "antd"
+        }]
+      ]
+    }
+  }
+}
