@@ -10,6 +10,7 @@ stages:
   - build
 
 before_script:
+  - nvm use default
   - yarn versions
   - yarn --frozen-lockfile
 
