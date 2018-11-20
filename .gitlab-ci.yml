@@ -23,6 +23,6 @@ build:
   script:
     - yarn build
   artifacts:
-      name: app
-      paths:
-        - dist/app/*
+    name: app
+    paths:
+      - build
