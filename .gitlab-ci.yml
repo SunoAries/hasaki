@@ -25,4 +25,4 @@ build:
   artifacts:
     name: app
     paths:
-      - dist/app/*
+      - dist
