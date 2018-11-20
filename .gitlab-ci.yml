@@ -1,0 +1,28 @@
+image: node
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - node_modules/
+
+stages:
+  - test
+  - build
+
+before_script:
+  - yarn versions
+  - yarn --frozen-lockfile
+
+test:
+  stage: test
+  script:
+    - yarn test
+
+build:
+  stage: build
+  script:
+    - yarn build
+  artifacts:
+      name: app
+      paths:
+        - dist/app/*
