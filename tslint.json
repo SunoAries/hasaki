@@ -43,7 +43,8 @@
     ],
     "prettier": true,
     "no-duplicate-string": [true, 5],
-    "no-extra-semicolon": false
+    "no-extra-semicolon": false,
+    "function-name": false
   },
   "linterOptions": {
     "exclude": [
