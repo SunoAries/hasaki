@@ -1,18 +1,29 @@
 import React from 'react'
 import './App.css'
-import Bar from './Bar'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const App = () => (
   <div className="App">
-    <header className="App-header">
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-        Learn React
-      </a>
-    </header>
-    <Bar />
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about/">About</Link>
+            </li>
+            <li>
+              <Link to="/users/">Users</Link>
+            </li>
+          </ul>
+        </nav>
+        <Route path="/" exact component={() => <div>index</div>} />
+        <Route path="/about/" component={() => <div>about</div>} />
+        <Route path="/users/" component={() => <div>users</div>} />
+      </div>
+    </Router>
   </div>
 )
 

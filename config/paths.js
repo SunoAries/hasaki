@@ -53,7 +53,6 @@ const resolveModule = (resolveFn, filePath) => {
   const extension = moduleFileExtensions.find((
     extension, // eslint-disable-line no-shadow
   ) => fs.existsSync(resolveFn(`${filePath}.${extension}`)))
-
   if (extension) {
     return resolveFn(`${filePath}.${extension}`)
   }
@@ -68,7 +67,7 @@ module.exports = {
   appBuild: resolveApp('build'),
   appPublic: resolveApp('public'),
   appHtml: resolveApp('public/index.html'),
-  appIndexJs: resolveModule(resolveApp, 'src/index'),
+  appIndexJs: resolveApp('src/index.tsx'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   appTsConfig: resolveApp('tsconfig.json'),
