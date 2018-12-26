@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import TestHooks from './views/hooks'
 
 const App = () => (
   <div className="App">
@@ -12,7 +13,7 @@ const App = () => (
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about/">About</Link>
+              <Link to="/hooks/">About</Link>
             </li>
             <li>
               <Link to="/users/">Users</Link>
@@ -20,7 +21,7 @@ const App = () => (
           </ul>
         </nav>
         <Route path="/" exact component={() => <div>index</div>} />
-        <Route path="/about/" component={() => <div>about</div>} />
+        <Route path="/hooks/" component={TestHooks} />
         <Route path="/users/" component={() => <div>users</div>} />
       </div>
     </Router>

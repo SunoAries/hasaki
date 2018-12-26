@@ -1,9 +1,9 @@
 {
   "extends": [
     "tslint-config-airbnb",
-    "tslint-sonarts",
     "tslint-config-prettier"
   ],
+  "defaultSeverity": "warning",
   "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
     "no-trailing-whitespace": true,
