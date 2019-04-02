@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton } from '@material-ui/co
 import MenuIcon from '@material-ui/icons/Menu'
 import styled from 'styled-components'
 
-interface AppBarProps {
+type AppBarProps = {
   className?: string
 }
 
