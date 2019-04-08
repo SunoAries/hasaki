@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/SunoAries/hasaki.svg?branch=master)](https://travis-ci.org/SunoAries/hasaki)
-Thanks God, I didn't find a proper project [Create React App](https://github.com/facebook/create-react-app).
+Thanks God, I didn't find a proper project 
 
 ## Available Scripts
 

@@ -5,6 +5,7 @@
     "strictNullChecks": true,
     "module": "esnext",
     "jsx": "react",
+    "types": ["react", "jest"],
     "target": "esnext",
     "allowJs": true,
     "lib": [
