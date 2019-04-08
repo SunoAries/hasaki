@@ -8,7 +8,7 @@
     "types": ["react", "jest"],
     "target": "esnext",
     "allowJs": true,
-    "lib": [
+    "lib": [  // 需要引入的库文件的列表
       "es6",
       "es7",
       "es2017",

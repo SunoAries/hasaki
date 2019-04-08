@@ -247,20 +247,20 @@ module.exports = {
 
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
-      {
-        test: /\.(js|mjs|jsx)$/,
-        enforce: 'pre',
-        use: [
-          {
-            options: {
-              formatter: require.resolve('react-dev-utils/eslintFormatter'),
-              eslintPath: require.resolve('eslint'),
-            },
-            loader: require.resolve('eslint-loader'),
-          },
-        ],
-        include: paths.appSrc,
-      },
+      // {
+      //   test: /\.(js|mjs|jsx)$/,
+      //   enforce: 'pre',
+      //   use: [
+      //     {
+      //       options: {
+      //         formatter: require.resolve('react-dev-utils/eslintFormatter'),
+      //         eslintPath: require.resolve('eslint'),
+      //       },
+      //       loader: require.resolve('eslint-loader'),
+      //     },
+      //   ],
+      //   include: paths.appSrc,
+      // },
       {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
@@ -279,7 +279,7 @@ module.exports = {
           // Process application JS with Babel.
           // The preset includes JSX, Flow, TypeScript and some ESnext features.
           {
-            test: /\.(js|mjs|jsx|ts|tsx)$/,
+            test: /\.(js|mjs|jsx)$/,
             include: paths.appSrc,
 
             loader: require.resolve('babel-loader'),
@@ -304,10 +304,23 @@ module.exports = {
               compact: true,
             },
           },
+          {
+            test: /\.(ts|tsx)$/,
+            include: paths.appSrc,
+            use: [
+              {
+                loader: require.resolve('ts-loader'),
+                options: {
+                  transpileOnly: true,
+                  experimentalWatchApi: true,
+                },
+              },
+            ],
+          },
           // Process any JS outside of the app with Babel.
           // Unlike the application JS, we only compile the standard ES features.
           {
-            test: /\.(js|mjs)$/,
+            test: /\.js$/,
             exclude: /@babel(?:\/|\\{1,2})runtime/,
             loader: require.resolve('babel-loader'),
             options: {

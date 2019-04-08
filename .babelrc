@@ -11,25 +11,12 @@
     },
     "production": {
       "plugins": [
-        "lodash",
-        [
-          "import",
-          {
-            "libraryName": "antd",
-            "libraryDirectory": "es"
-          }
-        ]
+        "lodash"
       ]
     },
     "test": {
       "plugins": [
-        "dynamic-import-node",
-        [
-          "import",
-          {
-            "libraryName": "antd"
-          }
-        ]
+        "dynamic-import-node"
       ]
     }
   },
