@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import './index.css' // global css setting
+import '@/style/index.css' // global css setting
 import App from './App'
 
 render(<App />, document.getElementById('root'))
