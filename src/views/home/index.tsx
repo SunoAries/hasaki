@@ -1,4 +1,5 @@
 import React from 'react'
+import { testGet } from '@/api/global'
 
 interface IState {
   title: string
@@ -6,6 +7,11 @@ interface IState {
 class Home extends React.Component<{}, IState> {
   state = {
     title: '纪念刘和珍君',
+  }
+  componentDidMount() {
+    testGet().then(data => {
+      //TODO 等我来写真的逻辑
+    })
   }
   render(): React.ReactNode {
     return (
