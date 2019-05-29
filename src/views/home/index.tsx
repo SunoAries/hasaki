@@ -5,12 +5,16 @@ interface IState {
   title: string
 }
 class Home extends React.Component<{}, IState> {
-  state = {
+  readonly state = {
     title: '纪念刘和珍君',
+    testFreshness: true,
   }
   componentDidMount() {
     testGet().then(data => {
-      //TODO 等我来写真的逻辑
+      // TODO 等我来写真的逻辑
+    })
+    this.setState({
+      title: 'sssss',
     })
   }
   render(): React.ReactNode {

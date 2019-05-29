@@ -8,6 +8,7 @@
   "rules": {
     "no-trailing-whitespace": true,
     "semicolon": false,
+    "increment-decrement": false,
     "trailing-comma": [
       true,
       {
@@ -36,7 +37,6 @@
     ],
     "import-name": false,
     "align": [true, "parameters"],
-    "no-console": [true, "log", "info"],
     "max-line-length": [
       true,
       140

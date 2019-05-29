@@ -7,7 +7,7 @@ export const stringify = (params: any): string => {
     let value = params[name].toString()
     name = encodeURIComponent(name)
     value = encodeURIComponent(value)
-    pairs.push(name + '=' + value)
+    pairs.push(`${name} = ${value}`)
   }
   return pairs.join('&')
 }
@@ -36,30 +36,12 @@ export const Cookies = {
     }
     return cookie[params]
   },
-  setCookie(
-    name: string,
-    value: string,
-    expires?: Date,
-    path?: string,
-    domain?: string,
-    secure?: string,
-  ) {
-    let cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value)
-    if (expires) {
-      cookie += '; expires=' + expires.toUTCString()
-    }
-    if (path) {
-      cookie += '; path=' + path
-    }
-    if (domain) {
-      cookie += '; domain=' + domain
-    }
-    if (secure) {
-      cookie += '; secure=' + secure
-    }
+  setCookie(name: string, value: string) {
+    // 简易版，没有expires path domain secure
+    const cookie = `${encodeURIComponent(name)} = ${encodeURIComponent(value)}`
     document.cookie = cookie
   },
   remove(name: string) {
-    Cookies.setCookie(name, '', new Date(0))
+    Cookies.setCookie(name, '')
   },
 }
