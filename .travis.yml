@@ -2,10 +2,15 @@ language: node_js
 node_js:
   - "10"
 
-cache:
-  directories: node_modules
+env:
+  - JUST_A_EXMAPLE=test
+  - TYPE=MAIN
+
+cache: yarn
 
 install: yarn
 script: 
   - yarn test
   - yarn build
+
+  # TODO 持续部署
