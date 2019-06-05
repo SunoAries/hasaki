@@ -9,6 +9,9 @@ env:
 cache: yarn
 
 install: yarn
+before_script:
+  - "echo sasd"
+
 script: 
   - yarn test
   - yarn build
