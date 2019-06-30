@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 // 配置的react-router-config还是这样就挺好了
 import Home from '@/views/home'
-import TestHooks from '@/views/hooks'
+import TestHooks from '@/views/TodoList'
 import Event from '@/views/Event'
 import LargeList from '@/views/large-list'
 import TEST from '@/views/Test'
