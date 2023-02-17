@@ -21,7 +21,7 @@ class LargeList extends React.Component {
         <button
           onClick={() => {
             const data = this.state.data
-            // 循环整个树
+            // 循环整个树以得到树结构的数据
             data[Math.floor(Math.random() * 10000)] = 'SSSSSSSSSSSSSS'
             data[Math.floor(Math.random() * 10000)] = 'SSSSSSSSSSSSSS'
             data[Math.floor(Math.random() * 10000)] = 'SSSSSSSSSSSSSS'
