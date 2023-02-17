@@ -21,6 +21,7 @@ class LargeList extends React.Component {
         <button
           onClick={() => {
             const data = this.state.data
+            // 循环整个树
             data[Math.floor(Math.random() * 10000)] = 'SSSSSSSSSSSSSS'
             data[Math.floor(Math.random() * 10000)] = 'SSSSSSSSSSSSSS'
             data[Math.floor(Math.random() * 10000)] = 'SSSSSSSSSSSSSS'
